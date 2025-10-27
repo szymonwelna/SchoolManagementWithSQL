@@ -40,6 +40,7 @@ dependencies {
     implementation("net.synedra:validatorfx:0.6.1") {
       exclude(group = "org.openjfx")
     }
+    implementation("com.oracle.database.jdbc:ojdbc8:23.4.0.24.05")
     implementation("org.kordamp.ikonli:ikonli-javafx:12.3.1")
     implementation("org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
