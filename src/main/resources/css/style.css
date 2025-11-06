@@ -1,0 +1,21 @@
+/* Styl dla background-pane w main_screen_view.fxml*/
+.background-pane {
+    /*Lokalizacja pliku z tłem*/
+    -fx-background-image: url('../images/background2.jpg');
+    /*Rozmiar tła*/
+    -fx-background-size: cover;
+    /*Pozycjonowanie tła*/
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.h-box {
+    -fx-background-color: #195e00;
+}
+
+
+.bottom-button {
+    -fx-background-color: #0f5200;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

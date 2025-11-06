@@ -1,4 +1,4 @@
-package org.example.schoolmanagementwithsql;
+package org.example.schoolmanagementwithsql.data;
 
 import java.sql.*;
 
