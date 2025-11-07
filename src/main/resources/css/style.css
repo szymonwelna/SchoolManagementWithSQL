@@ -6,6 +6,7 @@
     -fx-background-repeat: no-repeat;
 }
 
+/* Dolny hbox z przyciskami w main_screen_view.fxml*/
 .glass-hbox {
     -fx-background-color: rgba(255, 255, 255, 0.4);
 
@@ -16,7 +17,7 @@
     -fx-border-radius: 5px;
 }
 
-
+/* Podstawowy styl dla przycisków*/
 .bottom-button-base {
     -fx-font-family: "Mukta";
     -fx-text-fill: white;
@@ -26,6 +27,7 @@
     -fx-border-radius: 5px;
 }
 
+/* Dodatkowe style pozwalające na zmianę stanów przycisków */
 .bottom-button-unclicked {
     -fx-background-color: rgba(255, 255, 255, 0.1);
     -fx-border-color: rgba(255, 255, 255, 0.1);
@@ -38,4 +40,14 @@
 .bottom-button-clicked {
     -fx-background-color: rgba(255, 255, 255, 0.25);
     -fx-border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Styl tytułów dla okien zarządzania */
+.main-title {
+    -fx-font-family: "Mukta";
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+
+    -fx-effect: dropshadow( gaussian , black , 1.0 , 1.0 , 0 , 0 );
 }
