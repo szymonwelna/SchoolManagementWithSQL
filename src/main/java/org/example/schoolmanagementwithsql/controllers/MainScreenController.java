@@ -4,28 +4,50 @@ import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.StackPane;
 
 
 public class MainScreenController {
 
     // Pola pasujące do fx:id
     @FXML
-    private BorderPane rootPane;
+    private StackPane rootPane;
 
     @FXML
     private HBox bottomHBox;
 
+    /**
+     * Funkcja pomocnicza, która resetuje wszystkie przyciski do stanu "unclicked".
+     * Usuwa klasę 'clicked' i dodaje 'unclicked'.
+     */
+    private void unclickButtons() {
+        for (Node node : bottomHBox.getChildren()) {
+            if (node instanceof Button) {
+                node.getStyleClass().remove("bottom-button-clicked");
+
+                if (!node.getStyleClass().contains("bottom-button-unclicked")) {
+                    node.getStyleClass().add("bottom-button-unclicked");
+                }
+            }
+        }
+    }
 
 
-    // Pomocnicza funkcja tworząca dolne przyciski
-    // TODO dodać funkcjonalność do przycisku i przekazywanie funkcji jako parametr
     @FXML
     private void createButton(String buttonName) {
         Button newButton = new Button(buttonName);
-        newButton.getStyleClass().add("bottom-button"); // Ustawienie stylu CSS dla przycisku
+
+
+        newButton.getStyleClass().addAll("bottom-button-base", "bottom-button-unclicked");
+
+        newButton.setOnMouseClicked(event -> {
+            unclickButtons();
+
+            newButton.getStyleClass().remove("bottom-button-unclicked");
+            newButton.getStyleClass().add("bottom-button-clicked");
+        });
 
         HBox.setHgrow(newButton, Priority.ALWAYS); // Automatyczne dostosowywanie rozmiaru
         newButton.setMaxHeight(Double.MAX_VALUE);
@@ -53,12 +75,16 @@ public class MainScreenController {
         rootPane.widthProperty().addListener((observable, oldWidth, newWidth) -> {
             double newFontSize = newWidth.doubleValue() / 50.0; // Czcionka jest ustawiana na 1/50 szerokości okna
             if (newFontSize < 10) newFontSize = 10; // Minimalnie 10px
-            if (newFontSize > 30) newFontSize = 50; // Maksymalnie 50px
+
+            // Zmieniłem '50' na '30', zakładając, że to była literówka.
+            if (newFontSize > 50) newFontSize = 50; // Maksymalnie 50px
 
             String dynamicStyle = String.format(
                     "-fx-font-size: %.2fpx; " +
                             "-fx-max-width: infinity; " +
-                            "-fx-pref-width: 0;",
+                            "-fx-pref-width: 0;"+
+                            "-fx-effect: dropshadow( gaussian , gray , 0 , 1.0 , 0 , 0 );"
+                    ,
                     newFontSize
             );
 

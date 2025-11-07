@@ -1,21 +1,31 @@
 /* Styl dla background-pane w main_screen_view.fxml*/
 .background-pane {
-    /*Lokalizacja pliku z tłem*/
     -fx-background-image: url('../images/background2.jpg');
-    /*Rozmiar tła*/
     -fx-background-size: cover;
-    /*Pozycjonowanie tła*/
     -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
 }
 
-.h-box {
-    -fx-background-color: #195e00;
-}
 
-
-.bottom-button {
-    -fx-background-color: #0f5200;
+.bottom-button-base {
+    -fx-font-family: "Mukta";
     -fx-text-fill: white;
     -fx-font-weight: bold;
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.bottom-button-unclicked {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.bottom-button-unclicked:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+.bottom-button-clicked {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-border-color: rgba(255, 255, 255, 0.3);
 }

@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 
-<BorderPane
-        fx:id="rootPane"
-        prefHeight="400.0"
-        prefWidth="600.0"
-        stylesheets="@/css/style.css"
-        xmlns="http://javafx.com/javafx/17.0.12"
-        xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="org.example.schoolmanagementwithsql.controllers.MainScreenController">
+<StackPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0"
+           stylesheets="@/css/style.css"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.schoolmanagementwithsql.controllers.MainScreenController">
+    <children>
 
-    <center>
-        <Pane
-                styleClass="background-pane"
-                BorderPane.alignment="CENTER"
-        />
-    </center>
+        <Pane styleClass="background-pane" />
 
-    <bottom>
-        <HBox
-                styleClass="h-box"
-                fx:id="bottomHBox"
-                alignment="CENTER"
-                BorderPane.alignment="CENTER"
-        />
-    </bottom>
+        <BorderPane style="-fx-background-color: transparent;">
+            <bottom>
+                <HBox fx:id="bottomHBox" alignment="CENTER"
+                      style="-fx-background-color: transparent;"
+                      BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
 
-</BorderPane>
+    </children>
+</StackPane>
