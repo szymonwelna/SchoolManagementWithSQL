@@ -18,7 +18,9 @@
             <bottom>
                 <HBox fx:id="bottomHBox" alignment="CENTER"
                       style="-fx-background-color: transparent;"
-                      BorderPane.alignment="CENTER" />
+                      BorderPane.alignment="CENTER"
+                      styleClass="glass-hbox"
+                />
             </bottom>
         </BorderPane>
 
