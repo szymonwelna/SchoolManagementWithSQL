@@ -7,7 +7,8 @@
 
         <Pane styleClass="background-pane" />
 
-        <BorderPane fx:id="mainContentPane" style="-fx-background-color: transparent;">
+        <BorderPane fx:id="mainContentPane"
+                    style="-fx-background-color: transparent; -fx-padding: 10;">
             <bottom>
                 <HBox fx:id="bottomHBox" alignment="CENTER" style="-fx-background-color: transparent;" styleClass="glass-hbox" BorderPane.alignment="CENTER" />
             </bottom>

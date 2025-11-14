@@ -2,36 +2,44 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.geometry.Insets?>
 
 <BorderPane
-        maxHeight="-Infinity"
-        maxWidth="-Infinity"
-        minHeight="-Infinity"
-        minWidth="-Infinity"
-        prefHeight="400.0"
-        prefWidth="600.0"
+        fx:id="studentManagementRoot"
+        styleClass="management-window"
         xmlns="http://javafx.com/javafx/17.0.12"
-        xmlns:fx="http://javafx.com/fxml/1">
-   <bottom>
-      <ButtonBar
-              prefHeight="40.0"
-              prefWidth="200.0"
-              BorderPane.alignment="CENTER"
-      />
-   </bottom>
-   <top>
-      <Label
-              text="Zarządzanie Uczniami"
-              BorderPane.alignment="CENTER"
-              styleClass="main-title"
-      />
-   </top>
-   <center>
-      <ListView
-              prefHeight="200.0"
-              prefWidth="200.0"
-              BorderPane.alignment="CENTER"
-      />
-   </center>
+        xmlns:fx="http://javafx.com/fxml/1"
+
+        fx:controller="org.example.schoolmanagementwithsql.controllers.StudentManagementController"
+>
+
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+    <top>
+        <Label
+                text="ZARZĄDZANIE UCZNIAMI"
+                BorderPane.alignment="CENTER"
+                styleClass="main-title"
+        />
+    </top>
+
+    <center>
+        <ListView fx:id="studentListView"
+                  BorderPane.alignment="CENTER"
+                  style="-fx-background-color: transparent;"
+        />
+    </center>
+
+    <bottom>
+        <ButtonBar fx:id="actionButtonBar"
+                   BorderPane.alignment="CENTER"
+        >
+            <buttons>
+                <Button text="Dodaj" />
+                <Button text="Edytuj" />
+                <Button text="Usuń" />
+                <Button text="Zamknij" />
+            </buttons>
+        </ButtonBar>
+    </bottom>
 </BorderPane>
