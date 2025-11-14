@@ -8,15 +8,13 @@ import javafx.scene.layout.BorderPane;
 
 public class StudentManagementController {
 
-    // --- KLUCZOWE POLE: Komunikacja z aplikacją główną ---
+    // Komunikacja z aplikacją główną
     private MainScreenController parentController;
-
-    // --- POPRAWKA A i B: Wszystkie pola muszą mieć @FXML i pasować do FXML ---
 
     @FXML // Odpowiada głównemu BorderPane w student_management_view.fxml
     private BorderPane studentManagementRoot;
 
-    @FXML // Odpowiada Label w sekcji <top> (jeśli dodasz jej fx:id="titleLabel")
+    @FXML // Odpowiada Label w sekcji <top>
     private Label titleLabel;
 
     @FXML // Odpowiada ListView w sekcji <center>
@@ -24,8 +22,6 @@ public class StudentManagementController {
 
     @FXML // Odpowiada ButtonBar w sekcji <bottom>
     private ButtonBar actionButtonBar;
-
-    // --- Komunikacja ---
 
     /**
      * Ustawia referencję do kontrolera głównego (MainScreenController).
@@ -35,16 +31,15 @@ public class StudentManagementController {
         this.parentController = controller;
     }
 
-    // --- Inicjalizacja ---
-
     /**
      * Metoda wywoływana automatycznie przez FXMLLoader po załadowaniu FXML.
      */
-    @FXML // POPRAWKA C: Metoda initialize musi mieć @FXML
+    @FXML
     private void initialize() {
-        // Logika inicjalizacji np. ładowanie danych do ListView
-
-        // Przykładowa logika: Wyślij dane do ListView
+        /* TODO tutaj dodaj wczytywanie listy uczniów z bazy danych,
+                możesz ewentualnie napisać do tego osobną funkcję,
+                żeby nie było tu za dużo nawalone
+        */
         studentListView.getItems().addAll("Anna Kowalska", "Bartosz Nowak", "Celina Wójcik");
     }
 }
