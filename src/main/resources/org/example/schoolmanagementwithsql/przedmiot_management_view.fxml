@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane
+        fx:id="przedmiotManagementRoot"
+        styleClass="management-window"
+        xmlns="http://javafx.com/javafx/17.0.12"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="org.example.schoolmanagementwithsql.controllers.PrzedmiotManagementController"
+        >
+
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+    <top>
+        <Label
+                text="ZARZĄDZANIE PRZEDMIOTAMI"
+                BorderPane.alignment="CENTER"
+                styleClass="main-title"
+        />
+    </top>
+
+    <center>
+        <ListView fx:id="przedmiotListView"
+                  BorderPane.alignment="CENTER"
+                  style="-fx-background-color: transparent;"
+        />
+    </center>
+
+    <bottom>
+        <ButtonBar fx:id="actionButtonBar"
+                   BorderPane.alignment="CENTER"
+        >
+            <buttons>
+                <Button text="Dodaj" />
+                <Button text="Edytuj" />
+                <Button text="Usuń" />
+                <Button text="Zamknij" />
+            </buttons>
+        </ButtonBar>
+    </bottom>
+
+</BorderPane>

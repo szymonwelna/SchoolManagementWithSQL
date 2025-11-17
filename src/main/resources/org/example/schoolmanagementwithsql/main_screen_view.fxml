@@ -2,15 +2,29 @@
 
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@/css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.schoolmanagementwithsql.controllers.MainScreenController">
+<StackPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0"
+           stylesheets="@/css/style.css"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.schoolmanagementwithsql.controllers.MainScreenController">
     <children>
 
         <Pane styleClass="background-pane" />
 
         <BorderPane fx:id="mainContentPane"
                     style="-fx-background-color: transparent; -fx-padding: 10;">
+
+            <!-- TU BĘDZIEMY ŁADOWAĆ WIDOKI -->
+            <center>
+                <StackPane fx:id="centerPane" />
+            </center>
+
             <bottom>
-                <HBox fx:id="bottomHBox" alignment="CENTER" style="-fx-background-color: transparent;" styleClass="glass-hbox" BorderPane.alignment="CENTER" />
+                <HBox fx:id="bottomHBox"
+                      alignment="CENTER"
+                      style="-fx-background-color: transparent;"
+                      styleClass="glass-hbox"
+                      BorderPane.alignment="CENTER" />
             </bottom>
         </BorderPane>
 

@@ -96,7 +96,7 @@ public class MainScreenController {
 
         // Utworzenie przycisków
         createButton("Uczniowie", "student_management_view.fxml");
-        createButton("Przedmioty", "student_management_view.fxml");
+        createButton("Przedmioty", "przedmiot_management_view.fxml");
         createButton("Klasy", "student_management_view.fxml");
         createButton("Nauczyciele", "student_management_view.fxml"); // Tymczasowo podane tylko jedno istniejące okno
 
